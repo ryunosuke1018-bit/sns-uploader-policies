@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNS Uploader — Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #f2f4f8;
+    --surface: #ffffff;
+    --ink: #1a2230;
+    --ink-soft: #5b6472;
+    --accent: #3457c9;
+    --accent-soft: #e8ecfb;
+    --rule: #dde2ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10141b;
+      --surface: #161c26;
+      --ink: #e8ebf1;
+      --ink-soft: #97a1b2;
+      --accent: #86a4ff;
+      --accent-soft: #1c2740;
+      --rule: #262e3c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 20px 80px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 5px 12px; border-radius: 999px; font-weight: 600;
+  }
+  h1 {
+    font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto;
+    font-weight: 560; font-size: clamp(28px, 5vw, 38px);
+    letter-spacing: -0.01em; text-wrap: balance; margin: 18px 0 6px;
+  }
+  .meta { color: var(--ink-soft); font-size: 14px; margin-bottom: 40px; }
+  h2 {
+    font-family: "Fraunces", Georgia, serif; font-weight: 560; font-size: 21px;
+    margin: 40px 0 10px; display: flex; gap: 10px; align-items: baseline;
+  }
+  h2 .num { color: var(--accent); font-variant-numeric: tabular-nums; font-size: 15px; font-weight: 700; }
+  p, li { font-size: 16px; color: var(--ink); }
+  p { margin: 10px 0; }
+  ul { margin: 10px 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+  strong { font-weight: 650; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { color: var(--ink-soft); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .table-wrap { overflow-x: auto; }
+  .card { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 20px; margin: 20px 0; }
+  hr { border: none; border-top: 1px solid var(--rule); margin: 48px 0 28px; }
+  footer { color: var(--ink-soft); font-size: 14px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Privacy Policy</span>
+  <h1>SNS Uploader — Privacy Policy</h1>
+  <p class="meta">Effective date: September 16, 2026</p>
+
+  <div class="card">
+    <p>SNS Uploader is a personal, single-user tool that runs on its developer's own computer. It is not a hosted service: there is no server operated by this tool that stores or processes anyone's data. This page explains what information the tool touches, and where it lives.</p>
+  </div>
+
+  <h2><span class="num">01</span> Who this applies to</h2>
+  <p>This tool is used only by its developer, on accounts the developer owns. It is not distributed to, or used by, the general public, so this policy describes handling of the developer's own account data — not third-party user data.</p>
+
+  <h2><span class="num">02</span> What the tool accesses</h2>
+  <p>To publish a video, the tool requests the minimum API access each platform requires for content upload:</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Platform</th><th>Access used</th></tr>
+      <tr><td>YouTube</td><td>OAuth token scoped to <code>youtube.upload</code> — upload videos to the developer's own channel</td></tr>
+      <tr><td>Instagram</td><td>Instagram Login access token and Instagram Business Account ID — publish media to the developer's own professional account</td></tr>
+      <tr><td>TikTok</td><td>Content Posting API client key/secret and access token — upload videos to the developer's own TikTok account</td></tr>
+      <tr><td>X</td><td>API key/secret and access token — post media to the developer's own account</td></tr>
+    </table>
+  </div>
+
+  <h2><span class="num">03</span> Where credentials and tokens are stored</h2>
+  <p>All API keys, client secrets, and access/refresh tokens are stored in local files on the developer's own computer, inside a private <code>credentials</code> folder. They are never transmitted to any server other than the official API endpoints of YouTube, Instagram, TikTok, and X themselves.</p>
+
+  <h2><span class="num">04</span> What is not collected</h2>
+  <ul>
+    <li>No analytics, tracking, or telemetry is collected by this tool.</li>
+    <li>No data about viewers, followers, or other platform users is collected or stored.</li>
+    <li>No data is sold, rented, or shared with any third party.</li>
+  </ul>
+
+  <h2><span class="num">05</span> Video content</h2>
+  <p>Video files processed by the tool remain on the developer's own device before and after upload. The tool does not copy them to any external storage beyond the destination platform the operator chooses to publish to.</p>
+
+  <h2><span class="num">06</span> Data retention and deletion</h2>
+  <p>Locally stored tokens remain until the developer deletes the credentials files or revokes access from within each platform's own account settings (e.g., YouTube's "Third-party apps with account access," Instagram's "Apps and Websites," TikTok's connected-apps settings, or X's connected-apps settings).</p>
+
+  <h2><span class="num">07</span> Children's privacy</h2>
+  <p>This tool is not directed at children and is not used to process data belonging to children.</p>
+
+  <h2><span class="num">08</span> Changes to this policy</h2>
+  <p>This policy may be updated as the tool evolves. The effective date at the top of this page reflects the most recent revision.</p>
+
+  <h2><span class="num">09</span> Contact</h2>
+  <p>Questions about this policy can be sent to <a href="mailto:ryunosuke1018@gmail.com">ryunosuke1018@gmail.com</a>.</p>
+
+  <hr>
+  <footer>SNS Uploader is a personal project. See also the <a href="terms.html">Terms of Service</a>.</footer>
+</div>
+</body>
+</html>
