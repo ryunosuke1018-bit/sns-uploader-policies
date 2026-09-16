@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>認証コード</title>
+<style>
+  body {
+    margin: 0;
+    background: #10141b;
+    color: #e8ebf1;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .card {
+    max-width: 560px;
+    width: 100%;
+    background: #161c26;
+    border: 1px solid #262e3c;
+    border-radius: 14px;
+    padding: 28px 24px;
+  }
+  h1 { font-size: 20px; margin: 0 0 14px; }
+  p { font-size: 14px; color: #97a1b2; margin: 6px 0 18px; }
+  .code-box {
+    background: #10141b;
+    border: 1px solid #262e3c;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 15px;
+    word-break: break-all;
+    user-select: all;
+  }
+  .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #86a4ff;
+    margin-bottom: 6px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>認証コード</h1>
+    <p>下のコードをコピーして、ターミナルに貼り付けてください。</p>
+    <div class="label">code</div>
+    <div class="code-box" id="code">(取得中...)</div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('code').textContent = params.get('code') || '(codeが見つかりませんでした。URL全体を確認してください)';
+  </script>
+</body>
+</html>
